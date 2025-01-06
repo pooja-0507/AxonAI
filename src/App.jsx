@@ -69,7 +69,7 @@ const App = () => {
               </div>
             </div> :
             <div className="middle h-[80vh] flex items-center flex-col justify-center">
-              <h1 className='text-4xl m-6'>AxonAI</h1>
+              <h1 className='font-sans text-4xl m-6'>AxonAI</h1>
               <div className="boxes mt-[30px] flex items-center gap-2">
                 <div className="card rounded-lg cursor-pointer transition-all hover:bg-[#201f1f] px-[20px] relative min-h-[20vh] bg-[#181818] p-[10px]">
                   <p className='text-[18px]'>What is coding ? <br />
