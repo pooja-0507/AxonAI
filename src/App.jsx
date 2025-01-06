@@ -21,11 +21,12 @@ const App = () => {
     }
   };
 
+  const API_KEY=import.meta.env.VITE_API_KEY;
   
   const generateResponse = async (msg) => {
     if (!msg) return;
     
-    const genAI = new GoogleGenerativeAI("AIzaSyDFRyaXFHNXFxlauR1IktnoZAB6YLC6rk4");
+    const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(msg);
     
@@ -69,7 +70,7 @@ const App = () => {
               </div>
             </div> :
             <div className="middle h-[80vh] flex items-center flex-col justify-center">
-              <h1 className='font-sans text-4xl m-6'>AxonAI</h1>
+              <h1 className='text-4xl m-6'>AxonAI</h1>
               <div className="boxes mt-[30px] flex items-center gap-2">
                 <div className="card rounded-lg cursor-pointer transition-all hover:bg-[#201f1f] px-[20px] relative min-h-[20vh] bg-[#181818] p-[10px]">
                   <p className='text-[18px]'>What is coding ? <br />
